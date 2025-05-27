@@ -20,5 +20,5 @@ export const routes = {
   "/404": "pages/404.html",
 };
 
-export const websiteDescription = "Qai Antique";
+export const websiteDescription = "Quai Antique";
 ("Bienvenue sur mon site web, où vous trouverez des informations sur nos services et notre entreprise.");
