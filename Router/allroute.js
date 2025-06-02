@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   router();
 });
 export const routes = {
-  "/": "pages/index.html",
+  "/": "pages/accueil.html",
   "/a-propos": "pages/a-propos.html",
   "/services": "pages/services.html",
   "/contact": "pages/contact.html",

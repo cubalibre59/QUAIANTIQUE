@@ -3,8 +3,9 @@ import { routes } from "./route.js";
 
 export function router() {
   const path = window.location.pathname;
-  const route = routes[path] || "pages/index.html";
+  const route = routes[path] || "pages/accueil.html";
 
+  
   fetch(route)
     .then((res) => res.text())
     .then((html) => {
