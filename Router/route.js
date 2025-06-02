@@ -1,7 +1,7 @@
 // route.js
 export const routes = {
   "/": "pages/accueil.html",
-  "/a-propos": "a-propos.html",
+  "/a-propos": "pages/a-propos.html",
   "/services": "pages/services.html",
   "/contact": "pages/contact.html",
 };
