@@ -1,0 +1,24 @@
+{
+  "name": "quaiantique",
+  "version": "1.0.0",
+  "description": "**QUAI ANTIQUE** est un projet de site web pour un restaurant gastronomique français mêlant tradition et modernité.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cubalibre59/QUAIANTIQUE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cubalibre59/QUAIANTIQUE/issues"
+  },
+  "homepage": "https://github.com/cubalibre59/QUAIANTIQUE#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.6",
+    "bootstrap-icons": "^1.13.1"
+  }
+}
