@@ -2,6 +2,12 @@
 // Option A: Include all of Bootstrap
 
 // Include any default variable overrides here (though functions won’t be available)
+$primary: #00ff6a; // Example of overriding a variable
+$font-family-sans-serif: "Monserrat",sans-serif !default; // Example of overriding a font family
+
+$font-family-serif:"Hind Madurai", serif !default; // Example of overriding a serif font family
+
+// Custom Bootstrap SCSS file
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 // Option B: Include only the components you need
