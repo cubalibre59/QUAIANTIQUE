@@ -24,8 +24,16 @@ Ce projet vise à créer une présence en ligne pour le restaurant *Quai Antique
 ```bash
 quai-antique/
 ├── index.html
-├── css/
-│   └── style.css
+├── scss
+     └── _custom.scss
+     └── main.css
+     └── main.css.map
+     └── main.scss
+├── node_modules
+     └── @poppersjs
+     └── bootstrap
+     └── bootstrap-icons
+     └── package-lock.json
 ├── js/
 │   └── script.js
 │   ├── allroute.js
