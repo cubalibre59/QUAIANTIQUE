@@ -6,6 +6,16 @@ $primary: #00ff6a; // Example of overriding a variable
 $font-family-sans-serif: "Monserrat",sans-serif !default; // Example of overriding a font family
 
 $font-family-serif:"Hind Madurai", serif !default; // Example of overriding a serif font family
+// Include the custom font family-navbar
+// This will apply the custom font to the navbar component
+  .savate-navbar {
+    font-family: 'Savate', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
 
 // Custom Bootstrap SCSS file
 

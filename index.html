@@ -6,6 +6,8 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Literata" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Savate:opsz@8..144&display=swap" rel="stylesheet">
+
 
     <title>QuaiAntique - Restaurant Chinois Traditionnel</title>
     <link
@@ -39,11 +41,33 @@
         height: 40px;
       }
     </style>
+    <style>
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900; /* Muy grueso */
+  font-size: 4rem;
+  position: relative;
+  display: inline-block;
+  color: #111;
+}
+
+/* Efecto de sombra clara con fuente más fina detrás */
+h1::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 300; /* Más delgada */
+  color: rgba(0, 0, 0, 0.15);
+  z-index: -1;
+}
+</style>
+
   </head>
   <body>
     <!-- NAVBAR FIJA -->
      <header class="header-bg">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-cyan-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-cyan-dark fixed-top savate-navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">
           <img src="images/logo quaiantique.png" alt="Logo QuaiAntique" />
@@ -81,6 +105,10 @@
       </div>
     </nav>
     </header> 
+    <h1 data-text="Restaurant">Restaurant</h1>  
+
+    <h1 class="fw-bold" style="font-family: 'Montserrat', sans-serif;">Restaurant </h1>
+    <h1 class="fw-bold" style="font-family: 'Literata', serif;" data-text="QuaiAntique">Quai_Antique</h1>
     
     <!-- CONTENIDO DINÁMICO -->
   
