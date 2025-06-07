@@ -15,7 +15,10 @@ $font-family-serif:"Hind Madurai", serif !default; // Example of overriding a se
     font-style: normal;
   }
 
-
+p{
+  font-family: $font-family-serif;
+  font-size: 1.2rem;
+}
 
 // Custom Bootstrap SCSS file
 
