@@ -18,6 +18,12 @@ p {
   font-size: 1.2rem;
 }
 
+.btn btn-primary {
+  background-color: #cca806;
+  border-color: #00ff6a;
+  color: #09e21b;
+}
+
 /*!
  * Bootstrap  v5.3.6 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors

@@ -25,6 +25,11 @@ p{
   font-family: $font-family-serif;
   font-size: 1.2rem;
 }
+.btn btn-primary {
+  background-color: $secundary;
+  border-color: $primary;
+  color: #09e21b;
+}
 
 // Custom Bootstrap SCSS file
 
