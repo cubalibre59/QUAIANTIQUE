@@ -12,6 +12,12 @@ p {
   font-size: 1.2rem;
 }
 
+.form-label {
+  color: #cca806;
+  font-family: "Hind Madurai", serif;
+  font-size: 1.2rem;
+}
+
 /*!
  * Bootstrap  v5.3.6 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
