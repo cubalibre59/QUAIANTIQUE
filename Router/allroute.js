@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 export const routes = {
   "/": "pages/accueil.html",
-  "/a-propos": "pages/a-propos.html",
+  "/a-propos": "pages/conexion.html",
   "/services": "pages/services.html",
   "/contact": "pages/contact.html",
   "/404": "pages/404.html",
