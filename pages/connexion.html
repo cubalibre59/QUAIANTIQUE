@@ -31,16 +31,29 @@
       }
       
     </style>
+     <style>
+  .nav-link:hover {
+    color: #FF8C00 !important;
+  }
+</style>
   </head>
   <body>
     <h1>BIENVENUE A LA PAGE CONNEXION</h1>
-     <header class="header-bg">
-    <div class="container text-center mt-5">
-      <h1>Bienvenue au restaurant Quai Antique</h1>
-      <p class="lead">Un lieu où la tradition rencontre la modernité.</p>
-      <button id="alertBtn" class="btn btn-primary">Cliquez ici</button>
-    </div>
-    <a class="navbar-brand" href="#">QUAIANTIQUE</a>
+<form>
+  <div class="mb-3">
+    <label for="emailInput" class="form-label">Email </label>
+    <input type="email" class="form-control" id="emailInput">
+    
+  </div>
+  <div class="mb-3">
+    <label for="PasswordInput" class="form-label">Mot de Passe</label>
+    <input type="password" class="form-control" id="PasswordInput">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">connexion</button>
+</form>
+    
+   
     <!-- NAVBAR FIJA -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-cyan-dark fixed-top">
       <div class="container-fluid">
