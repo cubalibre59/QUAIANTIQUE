@@ -24,6 +24,23 @@ p {
   color: #09e21b;
 }
 
+html {
+  font-family: "Savate", sans-serif;
+  font-size: 16px;
+  color: #193529;
+  position: relative;
+  min-height: 100%;
+}
+
+footer {
+  background-color: #00ff6a;
+  bottom: 0%;
+  padding: 15px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
 /*!
  * Bootstrap  v5.3.6 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
