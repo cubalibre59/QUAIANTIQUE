@@ -5,7 +5,8 @@
 $primary: #00ff6a; 
 $secundary: #cca806; // Example of overriding a variable
 $font-family-sans-serif: "Savate",sans-serif !default; // Example of overriding a font family
-
+$tertiary: #193529; // Example of a tertiary color variable
+// Include the custom font family-sans-serif
 $font-family-serif:"Hind Madurai", serif !default; // Example of overriding a serif font family
 // Include the custom font family-navbar
 // This will apply the custom font to the navbar component
