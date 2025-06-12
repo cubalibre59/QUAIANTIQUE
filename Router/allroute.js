@@ -17,6 +17,7 @@ export const routes = {
   "/connexion": "pages/connexion.html",
   "/services": "pages/services.html",
   "/contact": "pages/contact.html",
+  "/signup": "pages/signup.html",
   "/404": "pages/404.html",
 };
 

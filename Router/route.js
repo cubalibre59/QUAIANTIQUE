@@ -4,6 +4,7 @@ export const routes = {
   "/connexion": "pages/connexion.html",
   "/services": "pages/services.html",
   "/contact": "pages/contact.html",
+  "/signup": "pages/signup.html",
 };
 export const getRoute = (path) => {
   if (routes[path]) {
