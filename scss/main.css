@@ -24,17 +24,6 @@ p {
   color: #09e21b;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
 /*!
  * Bootstrap  v5.3.6 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
