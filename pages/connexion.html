@@ -77,13 +77,13 @@
     /* Ícono o botón */
     .icon {
       position: fixed;
-      top: 50px;
+      top: 90px;
       right: 20px;
       cursor: pointer;
-      z-index: 30;
-      background: #1487aa;
+      z-index: 9999;
+      background: #044042e1;
       color: rgb(245, 244, 241);
-      padding: 10px;
+      padding: 20px;
       border-radius: 20px;
     }
   </style>
@@ -94,16 +94,26 @@
     
       <div class="content">
         
-    <p>Restaurant Quai_Antique.</p>
+    <p>Laissez -nous vous guider chez Restaurant Quai_Antique.</p>
+  </div>
+  <div>
+    <i class="bi bi-person-exclamation"></i>
+    <a > Votre compte personnel</a>
+    <p> mot de passe oublie </p>
+    <h3> Vos reservation</h3>
+    <i class="bi bi-calendar2-month"></i>
+
   </div>
 
   <div class="overlay" id="overlay" onclick="closeLogin()"></div>
 
   <div class="login-box" id="loginBox">
-    <h3>Iniciar sesión</h3>
-    <input type="text" placeholder="Usuario">
-    <input type="password" placeholder="Contraseña">
-    <button onclick="closeLogin()">Entrar</button>
+   <p>Vous avez une compte ? <a >connecte-vous ici !</a></p>
+    <input type="text" placeholder="adresse e-mail">
+    <input type="password" placeholder="mot de passe">
+    <p>Mot de passe oublié ? <a href="/signup">Réinitialiser</a></p>
+    <p>Vous n'avez pas de compte ? <a href="/signup">Inscrivez-vous ici !</a></p>
+    <button onclick="closeLogin()">Envoyer</button>
   </div>
 
   <script>
