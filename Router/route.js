@@ -5,6 +5,7 @@ export const routes = {
   "/services": "pages/services.html",
   "/contact": "pages/contact.html",
   "/signup": "pages/signup.html",
+  "/reserver": "pages/reserver.html",
 };
 export const getRoute = (path) => {
   if (routes[path]) {
