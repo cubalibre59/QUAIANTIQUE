@@ -24,6 +24,19 @@ p {
   color: #09e21b;
 }
 
+.check-form {
+  background-color: #193529;
+  color: #cca806;
+  font-family: "Hind Madurai", serif;
+  font-size: 1.2rem;
+}
+
+.container principal {
+  background-color: #00ff6a;
+  cursor: pointer;
+  border-radius: 20px solid red;
+}
+
 /*!
  * Bootstrap  v5.3.6 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors

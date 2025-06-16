@@ -31,7 +31,18 @@ p{
   border-color: $primary;
   color: #09e21b;
 }
+.check-form{
+background-color: $tertiary;
+ color: $secundary;
+  font-family: $font-family-serif;
+  font-size: 1.2rem;
+}
+.container principal{
+  background-color:$primary;
+cursor: pointer;
+border-radius: 20px solid red;
 
+}
 
 
  
