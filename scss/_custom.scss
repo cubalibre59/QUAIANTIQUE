@@ -43,6 +43,40 @@ cursor: pointer;
 border-radius: 20px solid red;
 
 }
+// Custom styles for the card component
+
+// This will apply the custom font to the card component
+
+
+.card-sushi{
+   
+  position :relative;
+   filter:brightness(0.5);
+  
+  &::before {
+  content: "";  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:url(../images/image-sushi10.jpg);
+     background-size: cover;
+     filter:brightness(0.7);
+ }
+
+* {
+
+    position: relative;
+  }
+.card-sushi-content {
+  position: relative;
+  
+  padding: 20px;
+  color: white;
+  text-align: center;
+
+}
 
 
  
@@ -52,3 +86,4 @@ border-radius: 20px solid red;
 // Option B: Include only the components you need
 // @import "../node_modules/bootstrap/scss/functions";
 // Then add additional custom code here
+}
