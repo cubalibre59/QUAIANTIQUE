@@ -81,7 +81,7 @@ p {
 .card-sushi .card-sushi-content {
   position: relative;
   padding: 20px;
-  color: white;
+  color: rgb(116, 95, 4);
   text-align: center;
 }
 .card-sushi :root,
