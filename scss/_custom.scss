@@ -10,6 +10,33 @@ $tertiary: #193529; // Example of a tertiary color variable
 $font-family-serif:"Hind Madurai", serif !default; // Example of overriding a serif font family
 // Include the custom font family-navbar
 // This will apply the custom font to the navbar component
+$placeholder-opacity-max:           .5;
+$placeholder-opacity-min:           .2;
+
+.input-glow::placeholder{
+color :transparent;
+
+}
+.input-glow{
+  position:relative;
+  background:linear-gradient(to right, $primary, $secundary);
+  background-size: 200% 100%;
+  animation:glow-animation 1.5s infinite;
+  border-radius : 5px;
+  color:transparent;
+
+  }
+@keyframes glow-animation{
+
+  0%{
+  background-position:200% 0;
+}
+100%{ 
+
+  bacground-position:-200% 0;
+}
+}
+
   .savate-navbar {
     font-family: 'Savate', sans-serif;
     font-optical-sizing: auto;
@@ -77,7 +104,10 @@ border-radius: 20px solid red;
   text-align: center;
 
 }
-
+.redcol {
+  border-radius: 20px;
+  background-color: rgba(10, 37, 3, 0.5);
+}
 
  
 // Custom Bootstrap SCSS file

@@ -1,5 +1,29 @@
 @charset "UTF-8";
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
+.input-glow::-moz-placeholder {
+  color: transparent;
+}
+.input-glow::placeholder {
+  color: transparent;
+}
+
+.input-glow {
+  position: relative;
+  background: linear-gradient(to right, #00ff6a, #cca806);
+  background-size: 200% 100%;
+  animation: glow-animation 1.5s infinite;
+  border-radius: 5px;
+  color: transparent;
+}
+
+@keyframes glow-animation {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    bacground-position: -200% 0;
+  }
+}
 .savate-navbar {
   font-family: "Savate", sans-serif;
   font-optical-sizing: auto;
@@ -83,6 +107,10 @@ p {
   padding: 20px;
   color: rgb(116, 95, 4);
   text-align: center;
+}
+.card-sushi .redcol {
+  border-radius: 20px;
+  background-color: rgba(10, 37, 3, 0.5);
 }
 .card-sushi :root,
 .card-sushi [data-bs-theme=light] {
