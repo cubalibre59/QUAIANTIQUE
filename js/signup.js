@@ -64,3 +64,21 @@ inputMail.addEventListener("keyup", () => {
     inputMail.classList.add("is-invalid");
   }
 });
+//verification du mot de passe
+
+
+function validatePassword(password) {
+  return password.trim().length >= 6;  // mínimo 6 caracteres
+}
+
+inputPassword.addEventListener("keyup", () => {
+  const passTyped = inputPassword.value;
+
+  if (validatePassword(passTyped)) {
+    inputPassword.classList.add("is-valid");
+    inputPassword.classList.remove("is-invalid");
+  } else {
+    inputPassword.classList.remove("is-valid");
+    inputPassword.classList.add("is-invalid");
+  }
+});
