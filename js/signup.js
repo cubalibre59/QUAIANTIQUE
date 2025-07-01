@@ -4,12 +4,14 @@ const inputNom=document.getElementById("NomInput");
 const inputPrenom = document.getElementById("PrenomInput");
 const inputEmail = document.getElementById("emailInput");
 const inputPassword = document.getElementById("PasswordInput");
+const inputValidatePassword= document.getElementById("ValidatePasswordInput");
 
     // Ajouter les écouteurs pour chaque champ
 inputNom.addEventListener("keyup", () => validateRequired(inputNom));
 inputPrenom.addEventListener("keyup", () => validateRequired(inputPrenom));
 inputEmail.addEventListener("keyup", () => validateRequired(inputEmail));
 inputPassword.addEventListener("keyup", () => validateRequired(inputPassword));
+inputValidatePassword.addEventListener("keyup", () => validateRequired(inputValidatePassword));
 
 
 
@@ -80,5 +82,18 @@ inputPassword.addEventListener("keyup", () => {
   } else {
     inputPassword.classList.remove("is-valid");
     inputPassword.classList.add("is-invalid");
+  }
+});
+// confirmez le mot de passe
+inputValidatePassword.addEventListener("keyup", () => {
+  const passTyped = inputValidatePassword.value;
+  const originalPassword = inputPassword.value;
+
+  if (passTyped === originalPassword && validatePassword(passTyped)) {
+    inputValidatePassword.classList.add("is-valid");
+    inputValidatePassword.classList.remove("is-invalid");
+  } else {
+    inputValidatePassword.classList.remove("is-valid");
+    inputValidatePassword.classList.add("is-invalid");
   }
 });
