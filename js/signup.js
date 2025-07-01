@@ -33,10 +33,7 @@ else{
 }
 
 //validation avec regex des email//
-const inputEmail = document.getElementById("emailInput");
-inputEmail.addEventListener("keyup", () => validateEmail(inputEmail));
 
-// Fonction de validation d'email
 function validateEmail(input) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (emailRegex.test(input.value.trim())) {
@@ -47,3 +44,17 @@ function validateEmail(input) {
     input.classList.add("is-invalid");
   }
 }
+// Validation de l'email avec un exemple d'email attendu
+const mailUser = "utilisateur@example.com"; // el email attendu pour la validation
+
+inputMail.addEventListener("keyup", () => {
+  const emailTyped = inputMail.value.trim();
+
+  if (emailTyped === mailUser) {
+    inputMail.classList.add("is-valid");
+    inputMail.classList.remove("is-invalid");
+  } else {
+    inputMail.classList.remove("is-valid");
+    inputMail.classList.add("is-invalid");
+  }
+});
