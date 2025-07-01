@@ -31,3 +31,19 @@ else{
     input.classList.add("is-invalid");
 }
 }
+
+//validation avec regex des email//
+const inputEmail = document.getElementById("emailInput");
+inputEmail.addEventListener("keyup", () => validateEmail(inputEmail));
+
+// Fonction de validation d'email
+function validateEmail(input) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (emailRegex.test(input.value.trim())) {
+    input.classList.add("is-valid");
+    input.classList.remove("is-invalid");
+  } else {
+    input.classList.remove("is-valid");
+    input.classList.add("is-invalid");
+  }
+}
