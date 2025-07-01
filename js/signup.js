@@ -34,26 +34,32 @@ else{
 
 //validation avec regex des email//
 
-function validateEmail(input) {
+// Función para validar el formato email con regex
+function validateEmailFormat(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (emailRegex.test(input.value.trim())) {
-    input.classList.add("is-valid");
-    input.classList.remove("is-invalid");
-  } else {
-    input.classList.remove("is-valid");
-    input.classList.add("is-invalid");
-  }
+  return emailRegex.test(email.trim());
 }
-// Validation de l'email avec un exemple d'email attendu
-const mailUser = "utilisateur@example.com"; // el email attendu pour la validation
+
+// Email esperado para comparar
+const mailUser = "utilisateur@example.com";
+
+const inputMail = document.getElementById("emailInput");
 
 inputMail.addEventListener("keyup", () => {
   const emailTyped = inputMail.value.trim();
 
-  if (emailTyped === mailUser) {
-    inputMail.classList.add("is-valid");
-    inputMail.classList.remove("is-invalid");
+  // Primero validar formato
+  if (validateEmailFormat(emailTyped)) {
+    // Si formato válido, comparar con email esperado ignorando mayúsculas
+    if (emailTyped.toLowerCase() === mailUser.toLowerCase()) {
+      inputMail.classList.add("is-valid");
+      inputMail.classList.remove("is-invalid");
+    } else {
+      inputMail.classList.remove("is-valid");
+      inputMail.classList.add("is-invalid");
+    }
   } else {
+    // Si formato inválido, marcar inválido
     inputMail.classList.remove("is-valid");
     inputMail.classList.add("is-invalid");
   }
