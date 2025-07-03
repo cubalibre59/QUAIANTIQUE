@@ -112,37 +112,16 @@
 
   <div class="login-box" id="loginBox">
    <p>Vous avez une compte ? <a >connecte-vous ici !</a></p>
-    <input type="text" placeholder="adresse e-mail">
-    <input type="password" placeholder="mot de passe">
+    <input type="text" id="email" placeholder="adresse e-mail">
+    <input type="password"  id="password" placeholder="mot de passe">
     <p>Mot de passe oublié ? <a href="/signup">Réinitialiser</a></p>
     <p>Vous n'avez pas de compte ? <a href="/signup">Inscrivez-vous ici !</a></p>
-    <button onclick="closeLogin()">Envoyer</button>
+    <button onclick="closeLogin()" >Envoyer</button>
   </div>
 
-  <script>
-    function openLogin() {
-      document.getElementById('overlay').style.display = 'block';
-      document.getElementById('loginBox').style.display = 'block';
-    }
-
-    function closeLogin() {
-      document.getElementById('overlay').style.display = 'none';
-      document.getElementById('loginBox').style.display = 'none';
-    }
-  </script>
-
-   <form id="loginForm" class="login-box" >
-    <p>Vous avez un compte ? Connectez-vous ici !</p>
-  <input type="text" id="username" placeholder="adresse e-mail">
-  <input type="password" id="password" placeholder="mot de passe">
-  <button type="submit">Envoyer</button>
   
-  </form>
 
-  <div id="logoutSection" class=" d-none ">
-          <p>Bienvenue, <span id="userDisplay"></span> !</p>
-          <button id="logoutBtn" class="btn btn-danger" >Se déconnecter</button>
-        </div>
+   
 
 <div class="text-center" pt-5>
   <a  href="/signup">Vous n 'avez pas de compte ? Inscrivez-vous ici !</a>
@@ -254,6 +233,14 @@
 <!-- Bootstrap Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 <script src="../js/connexion.js"></script>
+<script>
+function openLogin() {
+  document.getElementById('loginBox').style.display = 'block';
+  document.getElementById('overlay').style.display = 'block';
+}
+</script>
+
+
 
  </body>
 </html>
