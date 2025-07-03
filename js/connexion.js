@@ -15,11 +15,11 @@ function closeLogin() {
   // Verificar credenciales al hacer clic en "Envoyer"
   if (email === validEmail && password === validPassword) {
     alert("Connexion réussie vous pouvez reserver une table !");
-    const token = "lmlmlmlmpoiuyty"; // Aquí puedes generar un token real
-      setToken(token); // Guarda el token en la cookie
+    
     window.location.href="reserver.html"; // Redirigir a la página de reserva
     // Aquí puedes cerrar el login o redirigir
-   
+   const token = "lmlmlmlmpoiuyty"; // Aquí puedes generar un token real
+      setToken(token); // Guarda el token en la cookie
     document.getElementById('loginBox').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
   } else {
@@ -27,7 +27,10 @@ function closeLogin() {
   }
 }
 
-
+function openLogin() {
+  document.getElementById('loginBox').style.display = 'block';
+  document.getElementById('overlay').style.display = 'block';
+}
 
 
  
