@@ -14,7 +14,8 @@ function closeLogin() {
 
   // Verificar credenciales al hacer clic en "Envoyer"
   if (email === validEmail && password === validPassword) {
-    alert("Connexion réussie !");
+    alert("Connexion réussie vous pouvez reserver une table !");
+    window.location.href="reserver.html"; // Redirigir a la página de reserva
     // Aquí puedes cerrar el login o redirigir
     document.getElementById('loginBox').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
