@@ -17,6 +17,7 @@ function closeLogin() {
     alert("Connexion réussie vous pouvez reserver une table !");
     window.location.href="reserver.html"; // Redirigir a la página de reserva
     // Aquí puedes cerrar el login o redirigir
+     setToken("token_de_ejemplo"); // Guarda el token en la cookie
     document.getElementById('loginBox').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
   } else {
