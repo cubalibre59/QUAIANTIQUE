@@ -31,16 +31,7 @@ function openLogin() {
   document.getElementById('loginBox').style.display = 'block';
   document.getElementById('overlay').style.display = 'block';
 }
-//masquer button connexion usuario est connecte 
-document.addEventListener("DOMContentLoaded", function() {
-  // Verifica si el usuario está conectado
-  if (getToken && typeof getToken === "function" && getToken()) {
-    const connexionBtn = document.getElementById("connexionBtn");
-    if (connexionBtn) {
-      connexionBtn.style.display = "none";
-    }
-  }
-});
+
 
  
   

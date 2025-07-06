@@ -55,3 +55,5 @@ function openLogin() {
   document.getElementById('loginBox').style.display = 'block';
   document.getElementById('overlay').style.display = 'block';
 }
+//masquer button connexion usuario est connecte 
+
