@@ -16,7 +16,7 @@ function closeLogin() {
   if (email === validEmail && password === validPassword) {
     alert("Connexion réussie vous pouvez reserver une table !");
     
-    window.location.href="reserver.html"; // Redirigir a la página de reserva
+    window.location.href="../pages/reserver.html"; // Redirigir a la página de reserva
     // Aquí puedes cerrar el login o redirigir
    const token = "lmlmlmlmpoiuyty"; // Aquí puedes generar un token real
       setToken(token); // Guarda el token en la cookie

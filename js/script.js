@@ -4,6 +4,16 @@ alert('script.js est chargé');
 
 const tokenCookieName= "accesstoken";
 
+const signoutBtn= document.getElementById("signout-Btn");
+if (signoutBtn) {
+  
+signoutBtn.addEventListener("click",signout) ;
+}
+function signout(){
+  eraseCookie(tokenCookieName);
+ 
+  window.location.href="/services"; // va a reload la page completment
+}
 function setToken(token){
     setCookie(tokenCookieName, token, 7);
 }

@@ -19,6 +19,7 @@ export const routes = {
   "/contact": "pages/contact.html",
   "/signup": "pages/signup.html",
    "/reserver": "pages/reserver.html",
+   "/deconnexion": "pages/deconnexion.html",
   "/404": "pages/404.html",
 };
 
