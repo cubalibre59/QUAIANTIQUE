@@ -7,11 +7,11 @@ const inputPassword = document.getElementById("PasswordInput");
 const inputValidatePassword= document.getElementById("ValidatePasswordInput");
 
     // Ajouter les écouteurs pour chaque champ
-inputNom.addEventListener("keyup", () => validateRequired(inputNom));
-inputPrenom.addEventListener("keyup", () => validateRequired(inputPrenom));
-inputEmail.addEventListener("keyup", () => validateRequired(inputEmail));
-inputPassword.addEventListener("keyup", () => validateRequired(inputPassword));
-inputValidatePassword.addEventListener("keyup", () => validateRequired(inputValidatePassword));
+if inputNom.addEventListener("keyup", () => validateRequired(inputNom));
+if inputPrenom.addEventListener("keyup", () => validateRequired(inputPrenom));
+if inputEmail.addEventListener("keyup", () => validateRequired(inputEmail));
+if inputPassword.addEventListener("keyup", () => validateRequired(inputPassword));
+if inputValidatePassword.addEventListener("keyup", () => validateRequired(inputValidatePassword));
 
 
 
