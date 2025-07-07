@@ -11,8 +11,8 @@ signoutBtn.addEventListener("click",signout) ;
 }
 function signout(){
   eraseCookie(tokenCookieName);
- 
-  window.location.href="/services"; // va a reload la page completment
+  
+  window.location.href= "/"; // va a reload la page accueil
 }
 function setToken(token){
     setCookie(tokenCookieName, token, 7);
@@ -47,6 +47,7 @@ function getCookie(name) {
 }
 
 
+
 function eraseCookie(name) {
   // On remplace la cookie avec une expiration passée
   document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
@@ -55,5 +56,18 @@ function openLogin() {
   document.getElementById('loginBox').style.display = 'block';
   document.getElementById('overlay').style.display = 'block';
 }
-//masquer button connexion usuario est connecte 
+//appeller si le token est ou pas present
+function isConnected() {
+  const token = getToken();
+  return token !== null && token !== undefined && token !== "";
+}
+
+// Llamada a la función al cargar la página
+if (isConnected()) {
+  alert("Bienvenue sur notre site web ! Vous êtes connecté.");
+  // ici tu peux afficher un bouton "Déconnexion"
+} else {
+  alert("Je ne suis pas connecté.");
+  // ici tu peux cacher les options réservées aux membres
+}
 
