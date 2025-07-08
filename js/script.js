@@ -9,7 +9,11 @@ const signoutBtn= document.getElementById("signout-Btn");
 if (signoutBtn) {
   
 signoutBtn.addEventListener("click",signout) ;
+function getRole(){ 
+  return getCookie(RoleCookieName);
+   
 }
+
 function signout(){
   eraseCookie(tokenCookieName);
   eraseCookie("RoleCookieName");
@@ -72,4 +76,51 @@ if (isConnected()) {
   alert("Je ne suis pas connecté.");
   // ici tu peux cacher les options réservées aux membres
 }
+/* 
+disconnected
+connected(admin ou client)
+  -admin
+  -client
+  */
+ function showAndHideElementsForRoles(){
+  const userConnected = isConnected(); 
+  const role=getRole();
+  let allElementsToEdit=document.querySelectorAll('([data-show])'); 
+  allElementsToEdit.forEach((element) => {
+    switch
+        (element.dataset.show){// Afficher l'élément
+case 'disconnected':
+  if (userConnected) {
+        element.classList.add("d-none"); // Afficher l'élément
+      
+      }
+     break;
+case 'connected':
+  if (!userConnected ){
+        element.classList.add("d-none"); // masque l'élément
+      
+      }
+     break;
+case 'admin':
+      if (!userConnected || role !== 'admin') {
+        element.classList.add("d-none"); // masque l'élément
+      
+      }
+     break;
+case 'client':
+ if (!userConnected || role !== 'client') {
+        element.classList.add("d-none"); // masque l'élément
+      
+      }
+     break;
 
+
+        } 
+  
+        }
+  });
+
+
+
+
+ }
