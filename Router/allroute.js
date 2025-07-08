@@ -1,5 +1,11 @@
 // allroute.js
 import { router } from "./router.js";
+import { allRoutes } from "./allroute.js";
+
+export function getRouteByUrl(path) {
+  return allRoutes.find((route) => route.url === path) || new Route("/404", "404", "pages/404.html", []);
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
   document.body.addEventListener("click", (e) => {

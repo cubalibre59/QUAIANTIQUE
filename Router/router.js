@@ -1,7 +1,8 @@
 // router.js
 import { routes } from "./route.js";
 import{allRoutes,websiteName} from "./allroute.js";
-
+import { getRole, isConnected } from "./auth.js"; // asegúrate de tener estas funciones
+import { getRouteByUrl } from "./routehelpers.js"; // si lo separas
 export function router() {
   const path = window.location.pathname;
   const route = routes[path] || "pages/accueil.html";
@@ -22,10 +23,12 @@ export function router() {
 window.addEventListener("popstate", router); // Écoute les changements d'historique (navigation arrière/avant)
 //afficher et masquer les elements en fonction du role
 
-
-
-
 }
+
+export async function router() {
+  const path = window.location.pathname;
+  const actualRoute = getRouteByUrl(path);
+// Vérifier si l'utilisateur a bien le droit de accéder à la page
 const path = window.location.pathname;
   // Récupération de l'URL actuelle
   const actualRoute = getRouteByUrl(path);
@@ -46,3 +49,14 @@ const path = window.location.pathname;
       }
     }
   }
+   // Charger le contenu HTML de la page
+  try {
+    const res = await fetch(actualRoute.pathHtml);
+    const html = await res.text();
+    document.getElementById("app").innerHTML = html;
+
+    document.title = `${actualRoute.title} - ${websiteName}`;
+  } catch (e) {
+    document.getElementById("app").innerHTML = "<h2>Page not found</h2>";
+  }
+}

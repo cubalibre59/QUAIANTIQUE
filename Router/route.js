@@ -22,7 +22,7 @@ export default class Route{
     this.title = title;
     this.pathHtml = pathHtml; 
     this.pathJs = pathJs;
-    this.autorize=this.authorize;
+    this.authorize=this.authorize;
   }
   }
 /*
