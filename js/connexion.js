@@ -20,6 +20,7 @@ function closeLogin() {
     // Aquí puedes cerrar el login o redirigir
    const token = "lmlmlmlmpoiuyty"; // Aquí puedes generar un token real
       setToken(token); // Guarda el token en la cookie
+      setCookie("RoleCookieName","admin",7);
     document.getElementById('loginBox').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
   } else {

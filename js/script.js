@@ -3,7 +3,8 @@ console.log("Script loaded successfully!");
 alert('script.js est chargé');
 
 const tokenCookieName= "accesstoken";
-
+const RoleCookieName="role";
+// gerere la connexion et la deconnexion
 const signoutBtn= document.getElementById("signout-Btn");
 if (signoutBtn) {
   
@@ -11,6 +12,7 @@ signoutBtn.addEventListener("click",signout) ;
 }
 function signout(){
   eraseCookie(tokenCookieName);
+  eraseCookie("RoleCookieName");
   
   window.location.href= "/"; // va a reload la page accueil
 }
