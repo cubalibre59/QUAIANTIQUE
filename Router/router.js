@@ -1,5 +1,6 @@
 // router.js
 import { routes } from "./route.js";
+import{allRoutes,websiteName} from "./allroute.js";
 
 export function router() {
   const path = window.location.pathname;

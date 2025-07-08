@@ -15,3 +15,29 @@ export const getRoute = (path) => {
     return "pages/404.html"; // Fallback to 404 page if route not found
   }
 };
+export default class Route{
+  constructor(url,title,pathHtml,authorize,pathJs=" ") {
+    this.url = url;
+    this.path = path;
+    this.title = title;
+    this.pathHtml = pathHtml; 
+    this.pathJs = pathJs;
+    this.autorize=this.authorize;
+  }
+  }
+/*
+[]-> tout le monde 
+["disconnected"]-> utilisateur non connecté
+["connected"]-> utilisateur connecté
+
+["admin"]-> admin
+["client"]-> client   
+["admin","client"]-> admin et client
+["client","admin"]-> client ou  admin
+
+  
+
+
+
+
+}
