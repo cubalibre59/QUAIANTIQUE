@@ -122,12 +122,8 @@ case 'client':
      break;
 
 
-        } 
-  
-        }
+        default:
+        console.warn(`Condition inconnue: ${showCondition}`);
+    }
   });
-
-
-
-
- }
+}
