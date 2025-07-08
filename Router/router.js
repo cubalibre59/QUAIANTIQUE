@@ -14,12 +14,13 @@ export function router() {
     })
     .catch((err) => {
       document.getElementById("app").innerHTML = "<h2>Page not found</h2>";
+      showAndHideElementsForRoles();// Appel de la fonction pour afficher/masquer les éléments en fonction du rôle
     });
 }
 
 window.addEventListener("popstate", router); // Écoute les changements d'historique (navigation arrière/avant)
 //afficher et masquer les elements en fonction du role
-showAndHideElementsForRoles();// Appel de la fonction pour afficher/masquer les éléments en fonction du rôle
+
 
 
 

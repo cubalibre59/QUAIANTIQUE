@@ -5,10 +5,15 @@ alert('script.js est chargé');
 const tokenCookieName= "accesstoken";
 const RoleCookieName="role";
 // gerere la connexion et la deconnexion
+document.addEventListener("DOMContentLoaded", () => {
 const signoutBtn= document.getElementById("signout-Btn");
 if (signoutBtn) {
   
 signoutBtn.addEventListener("click",signout) ;
+}
+showAndHideElementsForRoles();
+});
+// Fonction pour obtenir le rôle de l'utilisateur à partir des cookies
 function getRole(){ 
   return getCookie(RoleCookieName);
    
@@ -16,7 +21,7 @@ function getRole(){
 
 function signout(){
   eraseCookie(tokenCookieName);
-  eraseCookie("RoleCookieName");
+  eraseCookie(RoleCookieName);
   
   window.location.href= "/"; // va a reload la page accueil
 }
@@ -80,12 +85,14 @@ if (isConnected()) {
 disconnected
 connected(admin ou client)
   -admin
-  -client
+  -clients
   */
- function showAndHideElementsForRoles(){
+ function showAndHideElementsForRoles() {
+  // Cette fonction affiche ou masque les éléments en fonction de l'état de connexion et du rôle
   const userConnected = isConnected(); 
   const role=getRole();
-  let allElementsToEdit=document.querySelectorAll('([data-show])'); 
+ let allElementsToEdit = document.querySelectorAll('[data-show]');
+
   allElementsToEdit.forEach((element) => {
     switch
         (element.dataset.show){// Afficher l'élément
