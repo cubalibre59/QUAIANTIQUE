@@ -1,7 +1,7 @@
 // router.js
 import { routes } from "./route.js";
 import{allRoutes,websiteName} from "./allroute.js";
-import { getRole, isConnected } from "./auth.js"; // asegúrate de tener estas funciones
+import { getRole, isConnected } from "../js/connexion.js"; // asegúrate de tener estas funciones
 import { getRouteByUrl } from "./routehelpers.js"; // si lo separas
 export function router() {
   const path = window.location.pathname;
@@ -28,10 +28,9 @@ window.addEventListener("popstate", router); // Écoute les changements d'histor
 export async function router() {
   const path = window.location.pathname;
   const actualRoute = getRouteByUrl(path);
-// Vérifier si l'utilisateur a bien le droit de accéder à la page
-const path = window.location.pathname;
-  // Récupération de l'URL actuelle
-  const actualRoute = getRouteByUrl(path);
+
+
+  
 
   //Vérifier les droits d'accès à la page
   const allRolesArray = actualRoute.authorize;
