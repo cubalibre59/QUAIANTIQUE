@@ -94,36 +94,37 @@ connected(admin ou client)
  let allElementsToEdit = document.querySelectorAll('[data-show]');
 
   allElementsToEdit.forEach((element) => {
+        element.classList.remove("d-none");
     switch
-        (element.dataset.show){// Afficher l'élément
+        (element.dataset.show){
 case 'disconnected':
   if (userConnected) {
-        element.classList.add("d-none"); // Afficher l'élément
+        element.classList.add("d-none");
       
       }
      break;
 case 'connected':
   if (!userConnected ){
-        element.classList.add("d-none"); // masque l'élément
+        element.classList.add("d-none"); 
       
       }
      break;
 case 'admin':
       if (!userConnected || role !== 'admin') {
-        element.classList.add("d-none"); // masque l'élément
+        element.classList.add("d-none"); 
       
       }
      break;
 case 'client':
  if (!userConnected || role !== 'client') {
-        element.classList.add("d-none"); // masque l'élément
+        element.classList.add("d-none"); 
       
       }
      break;
 
 
         default:
-        console.warn(`Condition inconnue: ${showCondition}`);
+        console.warn(`Condition inconnue: ${element.dataset.show}`);
     }
   });
 }
