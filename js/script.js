@@ -4,6 +4,11 @@ alert('script.js est chargé');
 
 const tokenCookieName= "accesstoken";
 const RoleCookieName="role";
+// script.js
+export function showAndHideElementsForRoles() {
+  console.log("Función showAndHideElementsForRoles cargada.");
+}
+
 // gerere la connexion et la deconnexion
 document.addEventListener("DOMContentLoaded", () => {
 const signoutBtn= document.getElementById("signout-Btn");

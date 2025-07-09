@@ -1,7 +1,7 @@
 // router.js
 import { routes } from "./route.js";
 import { allRoutes, websiteName } from "./allroute.js";
-import { getRole, isConnected } from "../js/connexion.js";
+import { getRole, isConnected } from "../connexion.js";
 import { getRouteByUrl } from "./routehelpers.js";
 import { showAndHideElementsForRoles } from "../js/script.js";
 
