@@ -1,12 +1,12 @@
 // allroute.js
 import { router } from "./router.js";
-import { allRoutes } from "./allroute.js";
 
+//fonction par attent la route url 
 export function getRouteByUrl(path) {
   return allRoutes.find((route) => route.url === path) || new Route("/404", "404", "pages/404.html", []);
 }
 
-
+//configuration spa
 document.addEventListener("DOMContentLoaded", () => {
   document.body.addEventListener("click", (e) => {
     if (e.target.matches("[data-link]")) {
@@ -29,8 +29,18 @@ export const routes = {
   "/404": "pages/404.html",
 };
 
-export const websiteDescription = "Quai Antique";
-("Bienvenue sur mon site web, où vous trouverez des informations sur nos services et notre entreprise.");
+
+// ✅ Definir clase Route
+class Route {
+  constructor(url, title, pathHtml, authorize = []) {
+    this.url = url;
+    this.title = title;
+    this.pathHtml = pathHtml;
+    this.authorize = authorize;
+  }
+}
+
+
 //define ici allroutes
 export const allRoutes = [
   new Route("/", "Accueil", "pages/accueil.html", []),
@@ -42,6 +52,6 @@ export const allRoutes = [
   new Route("/deconnexion", "Déconnexion", "pages/deconnexion.html", ["connected"]),
   new Route("/404", "Page non trouvée", "pages/404.html"),
 ];
-//le titre s 'affiche comment ceci:Route.titre-websitename
-export const websiteName = "Quai Antique - Mon Site Web";
-
+// Define el nombre del sitio web
+export const websiteDescription = "Quai Antique";
+("Bienvenue sur mon site web, où vous trouverez des informations sur nos services et notre entreprise.");

@@ -1,61 +1,44 @@
 // router.js
 import { routes } from "./route.js";
-import{allRoutes,websiteName} from "./allroute.js";
-import { getRole, isConnected } from "../js/connexion.js"; // asegúrate de tener estas funciones
-import { getRouteByUrl } from "./routehelpers.js"; // si lo separas
-export function router() {
-  const path = window.location.pathname;
-  const route = routes[path] || "pages/accueil.html";
-
-  
-  fetch(route)
-    .then((res) => res.text()) // Récupère le contenu de la page demandée
-    // .then((res) => res.json()) // Si la réponse est en JSON,
-    .then((html) => {
-      document.getElementById("app").innerHTML = html;//introduit html dans l'élément avec l'id "app"
-    })
-    .catch((err) => {
-      document.getElementById("app").innerHTML = "<h2>Page not found</h2>";
-      showAndHideElementsForRoles();// Appel de la fonction pour afficher/masquer les éléments en fonction du rôle
-    });
-}
-
-window.addEventListener("popstate", router); // Écoute les changements d'historique (navigation arrière/avant)
-//afficher et masquer les elements en fonction du role
-
-}
+import { allRoutes, websiteName } from "./allroute.js";
+import { getRole, isConnected } from "../js/connexion.js";
+import { getRouteByUrl } from "./routehelpers.js";
+import { showAndHideElementsForRoles } from "../js/script.js";
 
 export async function router() {
   const path = window.location.pathname;
   const actualRoute = getRouteByUrl(path);
 
+  // Verificar permisos
+  const authorizedRoles = actualRoute.authorize || [];
 
-  
-
-  //Vérifier les droits d'accès à la page
-  const allRolesArray = actualRoute.authorize;
-
-  if(allRolesArray.length > 0){
-    if(allRolesArray.includes("disconnected")){
-      if(isConnected()){
-        window.location.replace("/");
+  if (authorizedRoles.length > 0) {
+    if (authorizedRoles.includes("disconnected")) {
+      if (isConnected()) {
+        return window.location.replace("/");
       }
-    }
-    else{
-      const roleUser = getRole();
-      if(!allRolesArray.includes(roleUser)){
-        window.location.replace("/");
+    } else {
+      const role = getRole();
+      if (!authorizedRoles.includes(role)) {
+        return window.location.replace("/");
       }
     }
   }
-   // Charger le contenu HTML de la page
+
+  // Cargar contenido
   try {
     const res = await fetch(actualRoute.pathHtml);
     const html = await res.text();
     document.getElementById("app").innerHTML = html;
 
+    // Cambiar título y mostrar elementos según rol
     document.title = `${actualRoute.title} - ${websiteName}`;
+    showAndHideElementsForRoles();
   } catch (e) {
     document.getElementById("app").innerHTML = "<h2>Page not found</h2>";
   }
 }
+
+// Activar en eventos de navegación y al cargar la página
+window.addEventListener("popstate", router);
+document.addEventListener("DOMContentLoaded", router);
