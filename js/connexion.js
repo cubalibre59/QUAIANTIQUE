@@ -19,6 +19,7 @@ function closeLogin() {
     const user = {
       email: validEmail,
       role: "client", // o "admin"
+       };
 
     // Guardar en localStorage
     localStorage.setItem("user", JSON.stringify(user));
@@ -53,7 +54,7 @@ export function isConnected() {
   return localStorage.getItem("user") !== null;
  
   }
-// 11/07/25
+// 11/07/25  Exponer funciones al HTML si usas onclick
 window.openLogin = openLogin;
 window.closeLogin = closeLogin;
 
