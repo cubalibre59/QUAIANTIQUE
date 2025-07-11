@@ -6,6 +6,7 @@ export const routes = {
   "/contact": "pages/contact.html",
   "/signup": "pages/signup.html",
   "/reserver": "pages/reserver.html",
+  "/Mon compte": "pages/Mon compte.html",
   "/deconnexion": "pages/deconnexion.html",
 };
 export const getRoute = (path) => {
