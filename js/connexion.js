@@ -15,11 +15,10 @@ function closeLogin() {
   // Verificar credenciales al hacer clic en "Envoyer"
   if (email === validEmail && password === validPassword) {
     alert("Connexion réussie vous pouvez reserver une table !");
-      // Simular usuario con rol
+     //  Definir el objeto user antes de usarlo 11/07/25
     const user = {
       email: validEmail,
-      role: "admin" // Puedes cambiar esto a "client" si lo deseas
-    };
+      role: "client", // o "admin"
 
     // Guardar en localStorage
     localStorage.setItem("user", JSON.stringify(user));
@@ -29,7 +28,7 @@ function closeLogin() {
     // Aquí puedes cerrar el login o redirigir
    const token = "lmlmlmlmpoiuyty"; // Aquí puedes generar un token real
       setToken(token); // Guarda el token en la cookie
-      setCookie("role","admin",7);
+      
     //ferme la fenetre login
     document.getElementById('loginBox').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
@@ -53,4 +52,8 @@ export function getRole() {
 export function isConnected() {
   return localStorage.getItem("user") !== null;
  
-  
+  }
+// 11/07/25
+window.openLogin = openLogin;
+window.closeLogin = closeLogin;
+

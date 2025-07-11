@@ -1,6 +1,6 @@
 // allroute.js
 import { router } from "./router.js";
-i
+
 
 //fonction par attent la route url 
 export function getRouteByUrl(path) {
