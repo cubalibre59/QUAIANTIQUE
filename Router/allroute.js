@@ -25,7 +25,7 @@ export const routes = {
   "/services": "pages/services.html",
   "/contact": "pages/contact.html",
   "/signup": "pages/signup.html",
-   "/reserver": "pages/reserver.html",
+   "/menu": "pages/menu.html",
    "/deconnexion": "pages/deconnexion.html",
    "/Mon-compte": "pages/Mon-compte.html",
   "/404": "pages/404.html",

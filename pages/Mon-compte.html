@@ -104,8 +104,14 @@
   function logout() {
     localStorage.removeItem("user");
     window.location.href = "/";
-  }
+ 
 </script>
+ }
+  //  Aquí expones las funciones globalmente para que funcionen con onclick
+window.savePreferences = savePreferences;
+window.logout = logout;
+
+
 <footer class="text-white pt-4" style="background-color: #5a1c0a;">
   <div class="container text-center text-md-start">
     <div class="row">
