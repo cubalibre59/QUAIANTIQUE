@@ -1,13 +1,13 @@
 
 // router.js
-import { routes } from "./route.js";
+import { getRoute } from "./route.js";
 
 export function router() {
   const path = window.location.pathname;
-  const route = routes[path] || "pages/accueil.html";
 
-  
-  fetch(route)
+  const htmlPath = getRoute(path); // Esto ya devuelve "pages/accueil.html", etc.
+
+  fetch(htmlPath)
     .then((res) => res.text())
     .then((html) => {
       document.getElementById("app").innerHTML = html;
