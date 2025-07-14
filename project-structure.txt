@@ -1,0 +1,30 @@
+/* projet-structure.txt
+Quaiantique
+|--front-end/        ←- proyecto actual (Quai_Antique_Va)
+|--backend-api/      ←- Tu nueva API Symfony avec Doctrine (en développement)
+# 🍽️ QuaiAntique
+
+Bienvenue sur **QuaiAntique**, une application web pour réserver des plats dans un restaurant gastronomique français. Ce projet reflète la fusion entre **la tradition culinaire** et **la modernité digitale**.
+
+---
+
+## 🌐 Démo
+
+🖥️ Accédez à la version en ligne :  
+[🔗 cubalibre59.github.io/QUAIANTIQUE](https://cubalibre59.github.io/QUAIANTIQUE)
+
+---
+
+## 📁 Structure du projet
+
+QUAIANTIQUE/
+├── frontend/ ← Interface utilisateur (HTML, CSS, JS)
+│ ├── pages/
+│ ├── js/
+│ ├── scss/
+│ └── index.html
+├── backend-api/ ← API Symfony + Doctrine (bientôt intégrée)
+│ ├── src/
+│ ├── config/
+│ └── public/
+└── README.md ← Ce fichier
