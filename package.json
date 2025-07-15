@@ -24,7 +24,7 @@
   "name": "cubalibre59/quaiantique",
   "autoload": {
     "psr-4":  {
-      "QuaiAntique"\\: "src"
+      "QuaiAntique"\\: "src/"
        }
   }
 }
