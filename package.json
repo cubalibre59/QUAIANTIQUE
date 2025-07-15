@@ -20,5 +20,11 @@
   "dependencies": {
     "bootstrap": "^5.3.6",
     "bootstrap-icons": "^1.13.1"
+     },
+  "name": "cubalibre59/quaiantique",
+  "autoload": {
+    "psr-4":  {
+      "QuaiAntique"\\: "src"
+       }
   }
 }
