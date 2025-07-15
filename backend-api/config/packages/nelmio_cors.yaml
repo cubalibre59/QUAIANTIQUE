@@ -1,0 +1,14 @@
+# backend-api/config/packages/nelmio_cors.yaml-15/07/25
+# This file configures the Nelmio CORS bundle for handling Cross-Origin Resource Sharing (
+
+nelmio_cors:
+  defaults:
+    allow_origin: ['*']
+    allow_methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+    allow_headers: ['Content-Type', 'Authorization']
+    max_age: 3600
+  paths:
+    '^/api/':
+      allow_origin: ['*']
+      allow_methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+      allow_headers: ['Content-Type', 'Authorization']
