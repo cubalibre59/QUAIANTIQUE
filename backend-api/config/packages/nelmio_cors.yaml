@@ -3,7 +3,7 @@
 
 nelmio_cors:
   defaults:
-    allow_origin: ['*']
+    allow_origin: ['https://cubalibre59.github.io']
     allow_methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
     allow_headers: ['Content-Type', 'Authorization']
     max_age: 3600
