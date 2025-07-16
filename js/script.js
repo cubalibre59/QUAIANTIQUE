@@ -87,7 +87,7 @@ if (isConnected()) {
   // ici tu peux cacher les options réservées aux membres
 }
 // ici rajoute connecter front avec backend 15/07/25
-fetch("http://localhost:3000/backend-api/public/api/produits")
+fetch("http://localhost:8000/backend-api/public/api/produits")
   .then((res) => res.json())
   .then((data) => console.log(data))
   .catch((err) => console.error("Erreur API", err));
