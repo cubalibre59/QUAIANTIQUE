@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Entity;
-
+use ApiPlatform\Metadata\ApiResource; // ← IMPORTANTE
 use App\Repository\ProduitRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ProduitRepository::class)]
+#[ApiResource] // ← ESTO HACE QUE SEA UN RECURSO API
 class Produit
 {
     #[ORM\Id]
