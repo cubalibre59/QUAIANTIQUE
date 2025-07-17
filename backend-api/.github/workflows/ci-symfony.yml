@@ -2,9 +2,10 @@ name: Symfony CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [Quai_Antique_Va]
+     ]
   pull_request:
-    branches: [ main ]
+    branches: [ Quai_Antique_Va]
 
 jobs:
   tests:
