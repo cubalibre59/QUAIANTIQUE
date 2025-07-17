@@ -2,10 +2,9 @@ name: Symfony CI
 
 on:
   push:
-    branches: [Quai_Antique_Va]
-     ]
+    branches: ["Quai_Antique_Va"]
   pull_request:
-    branches: [ Quai_Antique_Va]
+    branches: ["Quai_Antique_Va"]
 
 jobs:
   tests:
@@ -56,3 +55,4 @@ jobs:
 
       - name: Run tests
         run: php bin/phpunit
+
