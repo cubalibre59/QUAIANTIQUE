@@ -1,8 +1,9 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+ccontrollers:
+  resource:
+    path: ../src/Controller/
+    namespace: App\Controller
+  type: attribute
+
 produit:
-    path:/
-        controller: App\Controller\ProduitController::index
+  path: /
+  controller: App\Controller\ProduitController::index
