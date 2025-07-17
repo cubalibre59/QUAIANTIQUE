@@ -1,4 +1,5 @@
 # QUAI ANTIQUE
+![Symfony CI](https://github.com/cubalibre59/QUAIANTIQUE/actions/workflows/ci-symfony.yml/badge.svg)
 
 **QUAI ANTIQUE** est un projet de site web pour un restaurant gastronomique français mêlant tradition et modernité.
 
