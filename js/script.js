@@ -91,4 +91,15 @@ fetch("http://localhost:8000/backend-api/public/api/produits")
   .then((res) => res.json())
   .then((data) => console.log(data))
   .catch((err) => console.error("Erreur API", err));
+// Gestion de la connexion RAILWAYS
 
+const API_BASE_URL = 'https://tamayosprojects.up.railway.app/api';
+
+fetch(`${API_BASE_URL}/login`, {
+  method: 'POST',
+  body: JSON.stringify({ email, password }),
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+// Gestion de la connexion
