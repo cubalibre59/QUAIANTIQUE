@@ -90,7 +90,9 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
+        ],
+        "start": "php -S 0.0.0.0:8080 -t public"
+          
     },
     "conflict": {
         "symfony/symfony": "*"
@@ -109,5 +111,8 @@
         "symfony/maker-bundle": "^1.0",
         "symfony/stopwatch": "7.3.*",
         "symfony/web-profiler-bundle": "7.3.*"
+        
+    
+
     }
 }
