@@ -17,6 +17,10 @@ class Produit
     #[ORM\Column(length: 255)]
     private ?string $nom = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $nom_article = null;
+
+
     #[ORM\Column]
     private ?float $prix = null;
 
