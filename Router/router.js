@@ -1,7 +1,8 @@
 
 // router.js
 import { getRoute } from "./route.js";
-
+import { routes } from './allroute.js';
+// Fonction pour gérer le routage
 export function router() {
   const path = window.location.pathname;
 

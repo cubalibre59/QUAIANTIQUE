@@ -4,7 +4,7 @@ import { router } from "./router.js";
 
 //fonction par attent la route url 
 export function getRouteByUrl(path) {
-  return allRoutes.find((route) => route.url === path) || new Route("/404", "404", "pages/404.html", []);
+ 
 }
 
 //configuration spa
