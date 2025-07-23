@@ -96,6 +96,10 @@ fetch("http://localhost:8000/backend-api/public/api/produits")
 const API_BASE_URL = 'https://backend-api-production-08e8.up.railway.app';
 
 
+//correction 22/07/25
+const email = document.getElementById('email').value;
+const password = document.getElementById('password').value;
+
 fetch(`${API_BASE_URL}/login`, {
   method: 'POST',
   body: JSON.stringify({ email, password }),

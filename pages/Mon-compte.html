@@ -26,9 +26,87 @@
       border-radius: 10px;
     }
   </style>
+  <style>
+  .nav-link:hover {
+    color: #FF8C00 !important;
+  }
+</style>
+
+    <style>
+      body {
+        padding-top: 70px; /* espacio para la navbar fija */
+      }
+      .bg-cyan-dark {
+        background-color: #027B9A; /* cian oscuro personalizado */
+      }
+      .navbar-brand img {
+        height: 80px;
+      }
+    </style>
+   <style>
+.card-sushi {
+  background-image: url(../images/image-sushi10.jpg);
+  background-size: cover;
+
+}
+ </style> 
 </head>
 <body>
   <div id="app"></div>
+   <!-- NAVBAR FIJA -->
+      <header class="header-bg">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-cyan-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img src="../images/logoquaiantique.png" alt="LogoQuaiAntique" />
+        </a>
+    
+    
+      <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+<!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/" data-link>Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/connexion" data-link>Connexion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact" data-link>Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/menu" data-link>menu</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="/signup" data-link>Signup</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="/reserver" data-link>Reserver</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" href="/Mon-compte"  data-link>Mon-compte</a>
+            </li>
+             <li class="nav-item">
+              <button class="nav-link" id="signout-Btn" data-link>Deconnexion</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </header>
 
 <div class="container mt-5">
   <div class="text-center">
@@ -113,9 +191,15 @@
 window.savePreferences = savePreferences;
 window.logout = logout;
 </script>
+<!--Importación del chatbot 21/07/25-->
+ <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "1b03d24b-c1d2-42d7-b5e7-41f294cc336e",
+        apiHost: "https://cloud.flowiseai.com",
+    })
+</script> 
  
-  
- ;
 
 
 <footer class="text-white pt-4" style="background-color: #5a1c0a;">
