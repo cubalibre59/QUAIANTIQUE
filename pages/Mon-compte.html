@@ -52,7 +52,18 @@
  </style> 
 </head>
 <body>
-  
+   <!-- chatflow :research engine  -->
+  import { BubbleChat } from 'flowise-embed-react'
+
+const App = () => {
+    return (
+        <BubbleChat
+            chatflowid="b8af5cbd-9a3b-4ab3-8a5d-a5f108069c5d"
+            apiHost="https://cloud.flowiseai.com"
+        />
+    );
+};
+
    <!-- NAVBAR FIJA -->
       <header class="header-bg">
     <nav class="navbar navbar-expand-lg navbar-dark bg-cyan-dark fixed-top">
