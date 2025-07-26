@@ -1,0 +1,7 @@
+<!--solo visible para ROLE_ADMIN-->
+<h1>Panneau Admin</h1>
+<p>Visible uniquement pour ROLE_ADMIN.</p>
+<script type="module">
+  import { protectPage } from "../js/auth/auth.guard.js";
+  protectPage("ROLE_ADMIN");
+</script>

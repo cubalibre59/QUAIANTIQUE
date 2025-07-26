@@ -26,9 +26,9 @@ export const routes = {
   "/contact": "pages/contact.html",
   "/signup": "pages/signup.html",
    "/menu": "pages/menu.html",
-   "/deconnexion": "pages/deconnexion.html",
+   "/admin": "pages/admin.html",
    "/Mon-compte": "pages/Mon-compte.html",
-  "/404": "pages/404.html",
+  "/403": "pages/403.html",
 };
 
 export const websiteDescription = "Quai Antique";

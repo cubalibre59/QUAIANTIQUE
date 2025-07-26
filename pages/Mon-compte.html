@@ -211,6 +211,11 @@ window.logout = logout;
     })
 </script> 
  
+<!--rajoute complement de admin.html besoin etre inscrpts 26/07-->
+<script type="module">
+  import { protectPage } from "../js/auth/auth.guard.js";
+  protectPage(); // No necesita rol
+</script>
 
 
 <footer class="text-white pt-4" style="background-color: #5a1c0a;">

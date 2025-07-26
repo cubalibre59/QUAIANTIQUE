@@ -116,4 +116,27 @@ border-radius: 20px solid red;
 // Option B: Include only the components you need
 // @import "../node_modules/bootstrap/scss/functions";
 // Then add additional custom code here
+
+//style rajoute footer+ navbar 26/7/25
+}
+.navbar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-top: 1px solid #ccc;
+  font-size: 0.9em;
+}
+
+.footer-right a {
+  margin-left: 15px;
+  color: inherit;
+  text-decoration: none;
 }
