@@ -9,22 +9,29 @@ function closeLogin() {
   const password = document.getElementById('password').value;
 
   // Credenciales válidas (ejemplo)
-  const validEmail = "test@example.com";
-  const validPassword = "123456";
+  // Aquí validas si es admin o client
+  let role = "client";
+  if (email === "admin@example.com" && password === "admin123") {
+    role = "admin";
+  }
 
-  // Verificar credenciales al hacer clic en "Envoyer"
-  if (email === validEmail && password === validPassword) {
+  // También puedes validar cliente válido aquí o hacerlo con otro if
+  if (
+    (email === "test@example.com" && password === "123456") ||
+    (role === "admin")
+  ) {
     alert("Connexion réussie vous pouvez reserver une table !");
-     //  Definir el objeto user antes de usarlo 11/07/25
+
     const user = {
-      email: validEmail,
-      role: "client", // o "admin"
-       };
+      email: email,
+      role: role,
+    };
+
 
     // Guardar en localStorage
     localStorage.setItem("user", JSON.stringify(user));
-
-    
+   
+     // Redirigir a la página de reserva  
     window.location.href="../pages/reserver.html"; // Redirigir a la página de reserva
     // Aquí puedes cerrar el login o redirigir
    const token = "lmlmlmlmpoiuyty"; // Aquí puedes generar un token real

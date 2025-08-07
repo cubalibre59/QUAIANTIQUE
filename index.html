@@ -75,6 +75,13 @@ h1::before {
 
   </head>
   <body>
+      <script>
+    const redirect = sessionStorage.redirect;
+if (redirect) {
+  sessionStorage.removeItem('redirect');
+  history.replaceState(null, null, redirect);
+}
+</script>
     
     <!-- NAVBAR FIJA -->
      <header class="header-bg">
@@ -100,25 +107,25 @@ h1::before {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="/" data-link>Accueil</a>
+              <a class="nav-link active" href="#/" data-link>Accueil</a>
             </li>
             <li class="nav-item" >
-              <a class="nav-link" href="/connexion" data-link>Connexion</a>
+              <a class="nav-link" href="#/connexion" data-link>Connexion</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contact"  data-link>Contact</a>
+              <a class="nav-link" href="#/contact"  data-link>Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/menu" data-link>Menu</a>
+              <a class="nav-link" href="#/menu" data-link>Menu</a>
             </li>
              <li class="nav-item"  >
-              <a class="nav-link" href="/signup" data-link>Signup</a>
+              <a class="nav-link" href="#/signup" data-link>Signup</a>
             </li>
             <li class="nav-item" >
-              <a class="nav-link" href="/reserver" data-link>Reserver</a>
+              <a class="nav-link" href="#/reserver" data-link>Reserver</a>
             </li>
               <li class="nav-item">
-              <a class="nav-link" href="/Mon-compte" data-link>Mon-compte</a>
+              <a class="nav-link" href="#/Mon-compte" data-link>Mon-compte</a>
             </li>
             <li class="nav-item" >
               <button class="nav-link" id="signout-Btn" data-link>Admin</button>
@@ -128,21 +135,30 @@ h1::before {
       </div>
     </nav>
     </header> 
-   
+    <div id="app"></div>
 
     <h1 class="fw-bold" style="font-family: 'Montserrat', sans-serif;">Restaurant </h1>
     <h1 class="fw-bold" style="font-family: 'Literata', serif;" data-text="QuaiAntique">Quai_Antique</h1>
-     <div id="app"></div>
-    
-    <!-- SCRIPTS -->
-   <script type="module" src="Router/allroute.js"></script>
-  
+    <!-- Contenido de la página se cargará aquí-->
+    <script type="module">
+  import { initChat } from "js/ai/chat.js";
 
+  document.addEventListener("DOMContentLoaded", () => {
+    initChat(); // Puedes pasar otra URL si es necesario
+  });
+</script>
+
+    <!-- SCRIPTS -->
+     <script type="module" src="js/main.js"></script>
+<script src="js/ai/chat.js"></script>
+   <script type="module" src="Router/allroute.js"></script>
+<script type="module" src="Router/router.js"></script>
     
     <script type="module" src="js/script.js"></script>
 <script type="module" src="js/connexion.js"></script>
 <script type="module" src="js/signup.js"></script>
-
+<script src="js/ui/navbar.js"></script>
+<script src="js/ui/footer.js"></script>
     
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -152,8 +168,8 @@ h1::before {
 
   <!-- Scripts -->
   <script type="module">
-    import { renderNavbar } from './ui/navbar.js';
-    import { renderFooter } from './ui/footer.js';
+    import { renderNavbar } from 'js/ui/navbar.js';
+    import { renderFooter } from 'js/ui/footer.js';
 
     renderNavbar();
     renderFooter();

@@ -1,36 +1,31 @@
 // allroute.js
 import { router } from "./router.js";
 
-
-//fonction par attent la route url 
-export function getRouteByUrl(path) {
- 
-}
-
-//configuration spa
-document.addEventListener("DOMContentLoaded", () => {
-  document.body.addEventListener("click", (e) => {
-    if (e.target.matches("[data-link]")) {
-      e.preventDefault();
-      window.history.pushState(null, "", e.target.href);
-      router();
-    }
-  });
-
-  router();
-});
+// Routes SPA
 export const routes = {
   "/": "pages/accueil.html",
   "/connexion": "pages/connexion.html",
   "/services": "pages/services.html",
   "/contact": "pages/contact.html",
   "/signup": "pages/signup.html",
-   "/menu": "pages/menu.html",
-   "/admin": "pages/admin.html",
-   "/Mon-compte": "pages/Mon-compte.html",
+  "/menu": "pages/menu.html",
+  "/admin": "pages/admin.html",
+  "/Mon-compte": "pages/Mon-compte.html",
   "/403": "pages/403.html",
 };
 
-export const websiteDescription = "Quai Antique";
-("Bienvenue sur mon site web, où vous trouverez des informations sur nos services et notre entreprise.");
+
+
+// Función para obtener ruta desde el hash
+export function getRouteByUrl() {
+  const hash = window.location.hash || "#/";
+  const path = hash.slice(1);
+  return routes[path] ? path : "/403";
+}
+
+// SPA: escucha los cambios de hash y carga la ruta
+document.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("hashchange", router);
+  router(); // carga inicial
+});
 

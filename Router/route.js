@@ -11,9 +11,6 @@ export const routes = {
   "/403": "pages/403.html"
 };
 export const getRoute = (path) => {
-  if (routes[path]) {
-    return routes[path];
-  } else {
-    return "pages/403.html"; // Fallback to 403 page if route not found
-  }
+  const cleanPath = path.replace(/^#/, ""); // elimina el "#" inicial si existe
+  return routes[cleanPath] || "pages/403.html";
 };

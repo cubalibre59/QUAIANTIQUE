@@ -52,18 +52,7 @@
  </style> 
 </head>
 <body>
-   <!-- chatflow :research engine  -->
-  import { BubbleChat } from 'flowise-embed-react'
-
-const App = () => {
-    return (
-        <BubbleChat
-            chatflowid="b8af5cbd-9a3b-4ab3-8a5d-a5f108069c5d"
-            apiHost="https://cloud.flowiseai.com"
-        />
-    );
-};
-
+ 
    <!-- NAVBAR FIJA -->
       <header class="header-bg">
     <nav class="navbar navbar-expand-lg navbar-dark bg-cyan-dark fixed-top">
@@ -86,37 +75,6 @@ const App = () => {
         </button>
 
 
-<!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="/" data-link>Accueil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/connexion" data-link>Connexion</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contact" data-link>Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/menu" data-link>Menu</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link" href="/signup" data-link>Signup</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link" href="/reserver" data-link>Reserver</a>
-            </li>
-              <li class="nav-item">
-              <a class="nav-link" href="/Mon-compte"  data-link>Mon-compte</a>
-            </li>
-             <li class="nav-item">
-              <button class="nav-link" id="signout-Btn" data-link>Deconnexion</button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
     </header>
 <div id="app"></div>
 <div class="container mt-5">
@@ -202,14 +160,7 @@ const App = () => {
 window.savePreferences = savePreferences;
 window.logout = logout;
 </script>
-<!--Importación del chatbot 21/07/25-->
- <script type="module">
-    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-    Chatbot.init({
-        chatflowid: "1b03d24b-c1d2-42d7-b5e7-41f294cc336e",
-        apiHost: "https://cloud.flowiseai.com",
-    })
-</script> 
+
  
 <!--rajoute complement de admin.html besoin etre inscrpts 26/07-->
 <script type="module">
@@ -269,7 +220,24 @@ window.logout = logout;
     <a href="#" class="btn btn-secondary">Facebook</a>
     <a href="#" class="btn btn-secondary">Instagram</a>
   </footer>
+  import { initChat } from './ai/chat.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  initChat('https://tu-backend.railway.app/api/chat'); // o URL local para dev
+});
+
+  import { protectPage } from "../js/auth/auth.guard.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  protectPage(); // Solo requiere estar logueado
+
+  // O con rol específico:
+  // protectPage('admin');
+});
+
  <!-- Lien vers le fichier JS -->
+  <script src="js/main.js">
+   <script type="module" src="js/router.js"></script>
  <script  type="module" src="../js/script.js"></script>
 <script  type="module" src="../js/connexion.js"></script>
 <script  type="module" src="../js/signup.js"></script>
