@@ -1,6 +1,6 @@
 // js/ai/chat.js
 
-export function initChat(apiUrl = 'https://TON-BACKEND.railway.app/api/chat') {
+export function initChat(apiUrl = 'https://backend-api-production-08e8.up.railway.app/api/chat') {
   const container = document.createElement('div');
   container.innerHTML = `
     <div id="chat-wrapper" style="position:fixed;bottom:20px;right:20px;width:300px;max-height:400px;background:#fff;border:1px solid #ccc;box-shadow:0 0 10px rgba(0,0,0,0.2);border-radius:8px;display:flex;flex-direction:column;overflow:hidden;z-index:9999;">
