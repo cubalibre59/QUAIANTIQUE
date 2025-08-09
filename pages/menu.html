@@ -188,6 +188,15 @@
 
 <!-- Bootstrap Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+   <!-- chat de AZURE ai Foundry  -->
+
+<script type="module">
+  import { initChat } from './js/ai/chat.js';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initChat('https://backend-api-production-08e8.up.railway.app/api/chat');
+  });
+</script>
 
 
  </body>

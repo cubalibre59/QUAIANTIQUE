@@ -220,12 +220,7 @@ window.logout = logout;
     <a href="#" class="btn btn-secondary">Facebook</a>
     <a href="#" class="btn btn-secondary">Instagram</a>
   </footer>
-  import { initChat } from './ai/chat.js';
-
-document.addEventListener('DOMContentLoaded', () => {
-  initChat('https://tu-backend.railway.app/api/chat'); // o URL local para dev
-});
-
+ 
   import { protectPage } from "../js/auth/auth.guard.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -234,10 +229,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // O con rol específico:
   // protectPage('admin');
 });
+<!-- mon chat AI Foundray   ... -->
 
+<script type="module">
+  import { initChat } from '../js/ai/chat.js';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initChat('https://backend-api-production-08e8.up.railway.app/api/chat'); // mets ton vrai endpoint ici
+  });
+</script>
  <!-- Lien vers le fichier JS -->
   <script src="js/main.js">
-   <script type="module" src="js/router.js"></script>
+  </script>
+   <script type="module" src="../Router/router.js"></script>
  <script  type="module" src="../js/script.js"></script>
 <script  type="module" src="../js/connexion.js"></script>
 <script  type="module" src="../js/signup.js"></script>

@@ -112,14 +112,16 @@
 
      </div>
      <!--asistence chat tamayo cree sur azure microsoft-->
-      import { initChat } from './ai/chat.js';
+     <!-- mon chat AI Foundray   ... -->
 
-document.addEventListener('DOMContentLoaded', () => {
-  initChat('https://tu-backend.railway.app/api/chat'); // o URL local para dev
-});
+<script type="module">
+  import { initChat } from '../js/ai/chat.js';
 
+  document.addEventListener('DOMContentLoaded', () => {
+    initChat('https://backend-api-production-08e8.up.railway.app/api/chat'); // mets ton vrai endpoint ici
+  });
+</script>
 
-<script type="module" src="../js/ai/chat.js"></script>
     
            
      
@@ -193,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
  
 
 
-s
+
 
 
 
