@@ -8,7 +8,7 @@ nelmio_cors:
     max_age: 3600
   paths:
     '^/api/':
-      allow_origin: ['https://cubalibre59.github.io', 'http://localhost:8080']
+      allow_origin: ['*']
       allow_methods: ['GET', 'POST', 'OPTIONS']
       allow_headers: ['Content-Type', 'Authorization']
 
